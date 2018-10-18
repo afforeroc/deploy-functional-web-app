@@ -125,7 +125,6 @@ Haz click:
 
 
 ## Links de interés:
-•	ToolChain más información: [Toolchain Getting Started](https://console.bluemix.net/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
-•	Documentación de Cloud Foundry: https://docs.cloudfoundry.org/ 
-•	Documentación de IBM Cloud: https://console.bluemix.net/docs/ 
-
+*	ToolChain más información: [Toolchain Getting Started](https://console.bluemix.net/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
+*	Documentación de Cloud Foundry: https://docs.cloudfoundry.org/ 
+*	Documentación de IBM Cloud: https://console.bluemix.net/docs/ 
