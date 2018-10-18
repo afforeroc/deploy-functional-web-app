@@ -8,9 +8,6 @@ Despues de teminar este pattern usted entenderá como:
 * Crear un servicio en IBM Cloud
 * Usar un Toolchain para CI/CD
 
-
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/libardolara/nodejs-cloudant)
-
 ## Componentes Incluidos
 
 * [IBM Cloud - Cloud Foundry](https://console.bluemix.net/dashboard/cloudfoundry/overview): Ejecuta codigo en una plataforma como servicio (PaaS) demand en un ambiente serverless y altamente escalable.
@@ -46,11 +43,11 @@ $ ibmcloud login
 Si deseas cambiar la región puedes usar alguna de los siguientes comandos:
 
 ```
-$ ibmcloud login -a https://api.ng.bluemix.net			    // US South
-$ ibmcloud login -a https://api.us-east.bluemix.net 		// US East
-$ ibmcloud login -a https://api.eu-gb.bluemix.net 		  // UK
-$ ibmcloud login -a https://api.eu-de.bluemix.net  		  // Germany
-$ ibmcloud login -a https://api.au-syd.bluemix.net  		// Sydney
+$ ibmcloud login -a https://api.ng.bluemix.net            // US South
+$ ibmcloud login -a https://api.us-east.bluemix.net       // US East
+$ ibmcloud login -a https://api.eu-gb.bluemix.net         // UK
+$ ibmcloud login -a https://api.eu-de.bluemix.net         // Germany
+$ ibmcloud login -a https://api.au-syd.bluemix.net        // Sydney
 ```
 > Donde `-a`indica que se va a seleccionar una región de API específica.
 
@@ -120,6 +117,12 @@ Cloud Foundry soporta muchas tecnicas de despliegue, una muy util es el **Blue G
 * Copia y pega el contendo del archivo ![](blue-green.txt) en el campo “Deploy Script” y guarde.
 
 Ahora el Toolchain correrá usando la estrategia de deploy “Blue-Green deployment” la cual asegura que el servicio siempre estará corriendo aun cuando se hacen despliegues en caliente.
+
+### 5. Desplegar automaticamente
+
+Haz click:
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/libardolara/nodejs-cloudant)
+
 
 ## Links de interés:
 •	ToolChain más información: [Toolchain Getting Started](https://console.bluemix.net/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
