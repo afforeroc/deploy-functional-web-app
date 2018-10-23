@@ -75,9 +75,9 @@ $ ibmcloud target -o <organization name> -s <spacename>
 ```
 $ ibmcloud resource service-alias-create <nombre-del-alias> --instance-name <nombre-del-servicio>
 ```
-> <nombre-del-alias> es el nombre del alias a utilizar dentro de la aplicación de Cloud Foundry
+> \<nombre-del-alias\> es el nombre del alias a utilizar dentro de la aplicación de Cloud Foundry
 
->	<nombre-del-servicio> es el nombre de la base de datos creada al principio de este numeral.
+>	\<nombre-del-servicio\> es el nombre de la base de datos creada al principio de este numeral.
 
 ### 4. Desplegar la aplicación usando el CLI
 
