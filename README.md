@@ -102,7 +102,7 @@ $ ibmcloud app push
 *	Ahora selecciona en el menú lateral _visión general_ (o Overview) de tu aplicación, allí puedes observar y modificar la configuración y servicios que tiene tu aplicación.
 * En la sección de **Entrega Continua** elige habilitar. En este caso buscamos usar un código fuente ya creado en GitHub usando una cadena de entrega continua.
 * En la sección integraciones de herramientas selecciona la pestaña “Git Repos y Isue tracking”, y Clona el repositorio:
-http://github.com/ibmecod/nodejs-cloudant
+https://github.com/libardolara/nodejs-cloudant
 * En la pestaña de “Delivery Pipeline” crea la llave de seguridad para la seguridad de nuestro ToolChain
 * Haz click en Create para crear el Toolchain
 > Recuerda como estaba configurado el archivo manifest del repositorio original, es muy importante que cambiemos el manifest dentro del Git que acabamos de clonar en IBM Cloud
