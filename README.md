@@ -12,14 +12,14 @@ Despues de teminar este pattern usted entenderá como:
 
 ## Componentes Incluidos
 
-* [IBM Cloud - Cloud Foundry](https://console.bluemix.net/dashboard/cloudfoundry/overview): Ejecuta codigo en una plataforma como servicio (PaaS) demand en un ambiente serverless y altamente escalable.
-* [IBM Cloud - DevOps](https://console.bluemix.net/devops/getting-started): Herramientas de integración para realizar Despliegues continuos.
-* [Cloudant](https://console.ng.bluemix.net/catalog/services/cloudant-nosql-db): Una base de datos completamente manejada diseñada para aplicaciones web y mobile modernas que usan documentos como JSON.
+* [IBM Cloud - Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview): Ejecuta codigo en una plataforma como servicio (PaaS) demand en un ambiente serverless y altamente escalable.
+* [IBM Cloud - DevOps](https://cloud.ibm.com/devops/getting-started): Herramientas de integración para realizar Despliegues continuos.
+* [Cloudant](https://cloud.ibm.com/catalog/services/cloudant): Una base de datos completamente manejada diseñada para aplicaciones web y mobile modernas que usan documentos como JSON.
 
 # Prerequisitos
 
-* Cuenta activa de [IBM Cloud](https://console.bluemix.net)
-* [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use): CLI para desplegar servicios y aplicaciones desde la terminal.
+* Cuenta activa de [IBM Cloud](https://cloud.ibm.com)
+* [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install_use): CLI para desplegar servicios y aplicaciones desde la terminal.
 
 # Paso a Paso
 
@@ -68,7 +68,7 @@ $ ibmcloud target -o <organization name> -s <spacename>
 
 ### 3. Crear el servicio Cloudant Database
 
-* Crea el servicio [**Cloudant**](https://console.bluemix.net/catalog/services/cloudant) escogiendo `Use both legacy credentials and IAM` para la opción _Available authentication method_. 
+* Crea el servicio [**Cloudant**](https://cloud.ibm.com/catalog/services/cloudant) escogiendo `Use both legacy credentials and IAM` para la opción _Available authentication method_. 
 * Copia el nombre del servicio.
 * Para que desde cualquier aplicación en la organización y espacio de Cloud Foundry se pueda utilizar la base de datos debes crear un Alias para tu servicio de **Cloudant**. Para esto debes ejecutar el siguiente comando:
 
@@ -90,12 +90,12 @@ $ ibmcloud resource service-alias-create <nombre-del-alias> --instance-name <nom
 $ ibmcloud app push 
 ```
 
-*	Ahora puedes acceder mediante la [interfaz Web](https://console.bluemix.net/dashboard/apps), a la vista general de la nueva aplicación y notar como tiene las configuraciones que le especificaste en el `manifest` están aplicadas.
+*	Ahora puedes acceder mediante la [interfaz Web](https://cloud.ibm.com/resources), a la vista general de la nueva aplicación y notar como tiene las configuraciones que le especificaste en el `manifest` están aplicadas.
 > Para más información sobre las posibilidades de manejo del archivo [manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html)
 
 ### 5. Desplegar la aplicación usando un Toolchain
 
-* Ve al [catalogo de IBM Cloud](https://console.bluemix.net/catalog/?search=runtime) y busca el runtime para Node.js
+* Ve al [catalogo de IBM Cloud](https://cloud.ibm.com/catalog?search=runtime) y busca el runtime para Node.js
 * Haz click en el runtime para Node.js
 *	Configura tu aplicación según tus preferencias, teniendo en cuenta que su nombre debe ser **único** dentro de IBM Cloud, y hacer click en crear con el plan predeterminado. 
 > Recuerda que la región y el espacio que seleccionados permiten la segmentación lógica de las aplicaciones, así que no los olvides.
@@ -123,10 +123,10 @@ Ahora el Toolchain correrá usando la estrategia de deploy “Blue-Green deploym
 ### 5. Desplegar automaticamente
 
 Haz click:
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/libardolara/nodejs-cloudant)
+[![Deploy to Bluemix](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/libardolara/nodejs-cloudant)
 
 
 ## Links de interés:
-*	ToolChain más información: [Toolchain Getting Started](https://console.bluemix.net/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
+*	ToolChain más información: [Toolchain Getting Started](https://cloud.ibm.com/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
 *	Documentación de Cloud Foundry: https://docs.cloudfoundry.org/ 
-*	Documentación de IBM Cloud: https://console.bluemix.net/docs/ 
+*	Documentación de IBM Cloud: https://cloud.ibm.com/docs 
