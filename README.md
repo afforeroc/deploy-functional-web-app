@@ -1,6 +1,6 @@
 # Desplegar Aplicación Web de Node.js con CloudantDB
 
-> Presentación [Introducción a Cloud Foundry](https://ibm.box.com/v/cf-ppt)
+> Presentación [Introducción a Cloud Foundry](https://ibm.box.com/v/cloud-foundry-ppt)
 
 En este tutorial se va a desarrollar un ejemplo para aprender como correr, modificar e implementar una aplicación con una base de datos Cloudant en la nube. Se explorarán dos metodos diferentes para lograrlo, y una vez sean finalizadas, la aplicación será accesible desde internet. 
 
