@@ -12,9 +12,9 @@ Despues de teminar este pattern usted entenderá como:
 
 ## Componentes Incluidos
 
-* [IBM Cloud - Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview): Ejecuta codigo en una plataforma como servicio (PaaS) demand en un ambiente serverless y altamente escalable.
-* [IBM Cloud - DevOps](https://cloud.ibm.com/devops/getting-started): Herramientas de integración para realizar Despliegues continuos.
-* [Cloudant](https://cloud.ibm.com/catalog/services/cloudant): Una base de datos completamente manejada diseñada para aplicaciones web y mobile modernas que usan documentos como JSON.
+* [IBM Cloud - Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview): Ejecuta codigo en una plataforma como servicio (PaaS) en un ambiente stateless y altamente escalable.
+* [IBM Cloud - DevOps](https://cloud.ibm.com/devops/getting-started): Herramientas de integración para realizar despliegues continuos.
+* [Cloudant](https://cloud.ibm.com/catalog/services/cloudant): Una base de datos No-SQL completamente manejada diseñada para aplicaciones web y mobile modernas que usan documentos como JSON.
 
 # Prerequisitos
 
@@ -25,7 +25,7 @@ Despues de teminar este pattern usted entenderá como:
 
 ### 1. Clonar el repo
 
-Descarga o clona el repositorio `fb-watson` localmente. 
+Descarga o clona el repositorio `nodejs-cloudant` localmente. 
 En una terminal, puedes ejecutar:
 
 ```
