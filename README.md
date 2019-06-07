@@ -12,7 +12,7 @@ Despues de teminar este pattern usted entenderá como:
 
 ## Componentes Incluidos
 
-* [IBM Cloud - Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview): Ejecuta codigo en una plataforma como servicio (PaaS) en un ambiente stateless y altamente escalable.
+* [IBM Cloud - Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview): Ejecuta código en una plataforma como servicio (PaaS) en un ambiente stateless y altamente escalable.
 * [IBM Cloud - DevOps](https://cloud.ibm.com/devops/getting-started): Herramientas de integración para realizar despliegues continuos.
 * [Cloudant](https://cloud.ibm.com/catalog/services/cloudant): Una base de datos No-SQL completamente manejada diseñada para aplicaciones web y mobile modernas que usan documentos como JSON.
 
@@ -98,25 +98,51 @@ $ ibmcloud app push
 * Ve al [catalogo de IBM Cloud](https://cloud.ibm.com/catalog?search=runtime) y busca el runtime para Node.js
 * Haz click en el runtime para Node.js
 *	Configura tu aplicación según tus preferencias, teniendo en cuenta que su nombre debe ser **único** dentro de IBM Cloud, y hacer click en crear con el plan predeterminado. 
+
+![](img/cf_create_app.png)
+
 > Recuerda que la región y el espacio que seleccionados permiten la segmentación lógica de las aplicaciones, así que no los olvides.
 *	Ahora selecciona en el menú lateral _visión general_ (o Overview) de tu aplicación, allí puedes observar y modificar la configuración y servicios que tiene tu aplicación.
 * En la sección de **Entrega Continua** elige habilitar. En este caso buscamos usar un código fuente ya creado en GitHub usando una cadena de entrega continua.
+
+![](img/cf_tool_enable.png)
+
 * En la sección integraciones de herramientas selecciona la pestaña “Git Repos y Isue tracking”, y Clona el repositorio:
 https://github.com/libardolara/nodejs-cloudant
+
+![](img/cf_tool_git.png)
+
 * En la pestaña de “Delivery Pipeline” crea la llave de seguridad para la seguridad de nuestro ToolChain
 * Haz click en Create para crear el Toolchain
+
+![](img/cf_tool_delivery.png)
+
 > Recuerda como estaba configurado el archivo manifest del repositorio original, es muy importante que cambiemos el manifest dentro del Git que acabamos de clonar en IBM Cloud
+
 * Dentro del ToolChain haz click en la etapa de Git
+
+![](img/cf_tool_chain.png)
+
 * Navega hacia abajo hasta encontrar el archivo `manifest.yml`, haz click en `manifest.yml`
 * Haz click en editar y copia y pega el contendio del manifest que tienes en tu computador para que queden iguales. 
+
+![](img/cf_git_manifest.png)
+
 * Haz click en “Commit changes”
 * Regresando a la cadena de entrega continua, selecciona Delivery Pipeline y encontraras que se ha ejecutado automáticamente, ya que se genero un nuevo commit en Git con los cambios al manifest.
+
+![](img/cf_tool_commit.png)
 
 Cloud Foundry soporta muchas tecnicas de despliegue, una muy util es el **Blue Green Deployment**
 > Sigue los siguientes pasos para configurar el Blue-Green Deployment en tu Toolchain
 
 * Modifica en el Delivery Pipeline en el Stage “Deploy”. Para esto haz click en la rueda en la esquina del stage.
-* Copia y pega el contendo del archivo ![](blue-green.txt) en el campo “Deploy Script” y guarde.
+
+![](img/cf_delivery_config.png)
+
+* Copia y pega el contendo del archivo [blue-green.txt](blue-green.txt) en el campo “Deploy Script” y guarde.
+
+![](img/cf_blue_green.png)
 
 Ahora el Toolchain correrá usando la estrategia de deploy “Blue-Green deployment” la cual asegura que el servicio siempre estará corriendo aun cuando se hacen despliegues en caliente.
 
