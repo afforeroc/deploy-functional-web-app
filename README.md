@@ -93,7 +93,56 @@ $ ibmcloud app push
 *	Ahora puedes acceder mediante la [interfaz Web](https://cloud.ibm.com/resources), a la vista general de la nueva aplicación y notar como tiene las configuraciones que le especificaste en el `manifest` están aplicadas.
 > Para más información sobre las posibilidades de manejo del archivo [manifest](https://docs.cloudfoundry.org/devguide/deploy-apps/manifest.html)
 
-### 5. Desplegar la aplicación usando un Toolchain
+### 5. Auto-scaling en Cloud Foundry
+
+Auto-scaling es una funcionalidad soportada para Cloud Foundry basada en el proyecto Open-source [App-Autoscaler](https://github.com/cloudfoundry/app-autoscaler) y permite ajustar automaticamente la cantidad de instancias de la aplicación que se encuentran desplegada a través de metricas operacionales o periodos de tiempo
+
+* En la interfaz web de la vista general de tu aplicación, haz click en el menú de la izquierda **Autoscaling**
+* En la nueva pestaña de policy, haz click en el botón **Create Auto-scaling policy**
+
+![](img/cf_creat_policy.png)
+
+* Define los minimos y maximos en numeros de instancias para tu aplicación. Por ejemplo minimo 1 y maximo 3.
+* En las reglas de escalamiento (Scaling Rules) vamos a definir cuando y como escala la aplicación.
+
+```
+Existen tipos de metricas que puedes usar en estas reglas dinamicas de escalamiento:
+
+Memory used, representa el valor absoluto de la memoria utilizada de su aplicación. La unidad de unidad de utilización de memoria es "MB".
+
+Memory utilization, es la memoria utilizada de la memoria total asignada a la aplicación en porcentaje. Por ejemplo, si el uso de memoria de la aplicación es de 100 MB y la cuota de memoria es de 200 MB, el valor de memory utlization es del 50%.
+
+CPU , es el porcentaje de CPU utilizado por la aplicación. La unidad de la CPU es "%".
+
+Response time representa el tiempo promedio que tarda la aplicación en responder a una solicitud en un período de tiempo determinado. La unidad de tiempo es "ms" (milisegundos).
+
+Throughput es el número total de solicitudes procesadas en un período de tiempo determinado. La unidad de rendimiento es "rps" (solicitudes por segundo).
+
+```
+
+* Define una regla que agregue una instancia cuando el **Memory utilization** sea mayor o igual al 70% por 120 segundos con un periodo de espera entre escalamientos de 120 segundos
+* Define otra regla que agregue una instancia cuando el **Response time** sea mayor o igual a 40ms por 120 segundos con un periodo de espera entre escalamientos de 120 segundos
+
+![](img/cf_metric_policy.png)
+
+* Añade una regla de horario (Schedule) en donde de lunes a viernes, en horario de oficina se incrementen el minimo de instancias a 2 y el maximo a 10.
+
+![](img/cf_schedule_policy.png)
+
+* Finalmente haz click en el botón **Save** (Se encuentra en la parte superior de las politicas de auto-scaling)
+* Abre la aplicación
+* En la sección de Autoscaling, ve a la pestaña de **Metrics**, observa como se ha comportado la aplicación.
+
+> Parece que la regla de **Response Time** estaba mal dimensionada, por lo cual la vamos a corregir.
+
+* Modifica la regla de **Response Time** para que incremente cuando el tiempo de respuesta sea mayor a 400ms. Recuerda siempre guardar los cambios a las reglas.
+
+> Para mayor información sobre la funcionalidad de autoscaling para Cloud Foundry puedes revisar la [documentación](https://cloud.ibm.com/docs/cloud-foundry-public?topic=cloud-foundry-public-autoscale_cloud_foundry_apps)
+
+> Antes de avanzar al siguiente punto de este taller, asegurate que la aplicación con la que venimos trabajando tenga solo una instancia.
+
+### 6. Desplegar la aplicación usando un Toolchain
+Ahora vamos a desplegar la misma aplicación pero utilizando la herammienta de despliegue continuo e integración continua de IBM Cloud, llamadas **Toolchains**
 
 * Ve al [catalogo de IBM Cloud](https://cloud.ibm.com/catalog?search=runtime) y busca el runtime para Node.js
 * Haz click en el runtime para Node.js
