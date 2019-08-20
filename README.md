@@ -141,6 +141,7 @@ La unidad de rendimiento es "rps" (solicitudes por segundo).
 > Parece que la regla de **Response Time** estaba mal dimensionada, por lo cual la vamos a corregir.
 
 * Modifica la regla de **Response Time** para que incremente cuando el tiempo de respuesta sea mayor a 400ms. Recuerda siempre guardar los cambios a las reglas.
+* Crea dos reglas para disminur el nuemero de instancias, usando el operador **<**(Menor que)
 
 > Para mayor información sobre la funcionalidad de autoscaling para Cloud Foundry puedes revisar la [documentación](https://cloud.ibm.com/docs/cloud-foundry-public?topic=cloud-foundry-public-autoscale_cloud_foundry_apps)
 
