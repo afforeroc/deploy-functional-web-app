@@ -108,15 +108,20 @@ Auto-scaling es una funcionalidad soportada para Cloud Foundry basada en el proy
 ```
 Existen tipos de metricas que puedes usar en estas reglas dinamicas de escalamiento:
 
-Memory used, representa el valor absoluto de la memoria utilizada de su aplicación. La unidad de unidad de utilización de memoria es "MB".
+Memory used, representa el valor absoluto de la memoria utilizada de su aplicación. 
+La unidad de unidad de utilización de memoria es "MB".
 
-Memory utilization, es la memoria utilizada de la memoria total asignada a la aplicación en porcentaje. Por ejemplo, si el uso de memoria de la aplicación es de 100 MB y la cuota de memoria es de 200 MB, el valor de memory utlization es del 50%.
+Memory utilization, es la memoria utilizada de la memoria total asignada a la aplicación en porcentaje. 
+Por ejemplo, si el uso de memoria de la aplicación es de 100 MB y la cuota de memoria es de 200 MB, 
+el valor de memory utlization es del 50%.
 
 CPU , es el porcentaje de CPU utilizado por la aplicación. La unidad de la CPU es "%".
 
-Response time representa el tiempo promedio que tarda la aplicación en responder a una solicitud en un período de tiempo determinado. La unidad de tiempo es "ms" (milisegundos).
+Response time representa el tiempo promedio que tarda la aplicación en responder a una 
+solicitud en un período de tiempo determinado. La unidad de tiempo es "ms" (milisegundos).
 
-Throughput es el número total de solicitudes procesadas en un período de tiempo determinado. La unidad de rendimiento es "rps" (solicitudes por segundo).
+Throughput es el número total de solicitudes procesadas en un período de tiempo determinado. 
+La unidad de rendimiento es "rps" (solicitudes por segundo).
 
 ```
 
@@ -195,7 +200,7 @@ Cloud Foundry soporta muchas tecnicas de despliegue, una muy util es el **Blue G
 
 Ahora el Toolchain correrá usando la estrategia de deploy “Blue-Green deployment” la cual asegura que el servicio siempre estará corriendo aun cuando se hacen despliegues en caliente.
 
-### 5. Desplegar automaticamente
+### 7. Desplegar automaticamente
 
 Haz click:
 [![Deploy to Bluemix](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https://github.com/libardolara/nodejs-cloudant)
