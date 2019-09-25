@@ -150,8 +150,10 @@ La unidad de rendimiento es "rps" (solicitudes por segundo).
 ### 6. Desplegar la aplicación usando un Toolchain
 Ahora vamos a desplegar la misma aplicación pero utilizando la herammienta de despliegue continuo e integración continua de IBM Cloud, llamadas **Toolchains**
 
-* Ve al [catalogo de IBM Cloud](https://cloud.ibm.com/catalog?search=runtime) y busca el runtime para Node.js
-* Haz click en el runtime para Node.js
+* Ve al [catalogo de IBM Cloud](https://cloud.ibm.com/catalog?search=cloud%20foundry) y busca el servicio para Cloud Foundry
+* Haz click en el servicio Cloud Foundry.
+* Haz click en el botón **Create** para una aplicación publica.
+* Selecciona el runtime para Node.Js
 *	Configura tu aplicación según tus preferencias, teniendo en cuenta que su nombre debe ser **único** dentro de IBM Cloud, y hacer click en crear con el plan predeterminado. 
 
 ![](img/cf_create_app.png)
