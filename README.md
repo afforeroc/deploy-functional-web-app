@@ -1,4 +1,4 @@
-# Desplegar Aplicación Web de Node.js con CloudantDB
+# Desplegar una aplicación web funcional usando el servicio de Cloud Foundry de IBM Cloud
 
 > Presentación [Introducción a Cloud Foundry](https://ibm.box.com/v/cloud-foundry-ppt)
 
